@@ -31,15 +31,18 @@
   font-weight: 400;
   overflow-anchor: auto;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+body{
+  background-image: linear-gradient(to bottom, #b4d1f5, #fff0d2, #d2d2fd);
+  min-height: 100dvh
+}
+#root{
+  @apply p-6;
+}
 .btn{
-  @apply bg-white p-2 text-blue-950;
+  @apply bg-white px-5 py-2 text-blue-950 rounded-r-full rounded-l-full;
 }
