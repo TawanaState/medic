@@ -46,3 +46,8 @@ body{
 .btn{
   @apply bg-white px-5 py-2 text-blue-950 rounded-r-full rounded-l-full;
 }
+.progress-bar{
+  --progress-value:0%;
+  transition: all 1s;
+  background-image: linear-gradient(to right, rgba(161, 214, 255, 0.542) var(--progress-value), transparent var(--progress-value));
+}
