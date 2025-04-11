@@ -15,7 +15,7 @@ export default function MainSect() {
     }, [])
 
 
-    return <div>
+    return <div className='md:px-24 lg:px-48'>
         <SymptomsSelect selected={selected} setSelected={setSelected} DATASET={dataset} />
 
         <Predictions symptoms={selected} />
