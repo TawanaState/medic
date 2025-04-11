@@ -1,5 +1,7 @@
 import './App.css';
+import Footer from './components/footer';
 import Header from './components/header';
+import MainSect from './components/main-sect';
 
 
 function App() {
@@ -7,6 +9,8 @@ function App() {
   return (
     <>
     <Header />
+    <MainSect />
+    <Footer />
     </>
   )
 }
