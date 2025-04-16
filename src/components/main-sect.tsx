@@ -3,6 +3,7 @@ import SymptomsSelect from './../ui/symptom';
 import Predictions from '../ui/predictions';
 import { useState } from 'react';
 import json_symptom_mapping from './../assets/symptom_mapping.json';
+import { predict } from '../utils/model';
 
 export default function MainSect() {
     const [selected, setSelected] = useState<string[]>([]);
@@ -13,6 +14,14 @@ export default function MainSect() {
         console.log(json_symptom_mapping);
         setDataset(Object.keys(json_symptom_mapping));
     }, [])
+
+    React.useEffect(() => {
+        console.log(selected);
+        // Call the predict function with the selected symptoms
+        predict(selected).then((result) => {
+            console.log(result);
+        });
+    }, [selected])
 
 
     return <div className='md:px-24 lg:px-48'>

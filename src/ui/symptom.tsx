@@ -42,33 +42,33 @@ const SymptomsSelect = ({ selected, setSelected, DATASET }: SymptomsSelectProps)
   });
 
   return (
-    <div>
+    <div className='mx-1 mr-1.5'>
       <label {...getLabelProps()} {...getFocusCaptureProps()}>
         {""}
       </label>
       <div
         {...getFocusCaptureProps()}
+        className='w-full'
         style={{
           border: '2px solid',
           borderColor: focused ? '#007bff82' : '#aaaaaa2e',
           borderRadius: 4,
           display: 'flex',
           flexWrap: 'wrap',
-          maxWidth: 320,
           gap: 6,
           padding: 6
         }}
       >
         {selected.map((item) => (
-          <button className="bg-slate-500/25 p-1.5 text-blue-950" key={item} onClick={() => removeSelect(item)}>
+          <button className="bg-slate-500/25 p-1.5 px-2 text-blue-950" key={item} onClick={() => removeSelect(item)}>
             {item}
           </button>
         ))}
         <div>
-          <input className="outline-none border border-solid border-slate-500/50 py-1.5 px-2" placeholder="Type symptom..." {...getInputProps()} />
+          <input className="outline-none rounded-md border border-solid border-slate-500/5 py-1.5 px-2 bg-white/0" placeholder="Type symptom..." {...getInputProps()} />
           {!isInputEmpty && <button {...getClearProps()} className='mso !text-sm px-1'>x</button>}
         </div>
-        <button {...getToggleProps()}>{open ? '↑' : '↓'}</button>
+        <button {...getToggleProps()} className='mso !text-base'>{open ? 'north' : 'south'}</button>
       </div>
 
       <ul
