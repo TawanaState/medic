@@ -15,13 +15,7 @@ export default function MainSect() {
         setDataset(Object.keys(json_symptom_mapping));
     }, [])
 
-    React.useEffect(() => {
-        console.log(selected);
-        // Call the predict function with the selected symptoms
-        predict(selected).then((result) => {
-            console.log(result);
-        });
-    }, [selected])
+    
 
 
     return <div className='md:px-24 lg:px-48'>
