@@ -1,58 +1,78 @@
-# React + TypeScript + Vite
+# 🏥 Medic - AI Disease Detection
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Medic AI](https://img.shields.io/badge/Medic-AI-blue)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.0-orange)
+![React](https://img.shields.io/badge/React-19-61dafb)
 
-Currently, two official plugins are available:
+## 🤔 What is This?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A fun experiment in medical diagnosis using AI! This web app lets you input symptoms and uses a deep learning model to suggest possible conditions. Think of it as a high-tech medical dictionary - definitely **not** a replacement for real doctors! (a part of me wants to build this though)
 
-## Expanding the ESLint configuration
+## ⚕️ How it Works
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Select your symptoms from a comprehensive list
+2. Our AI model (with 4,2 Million parameters!) processes them
+3. Get a list of possible conditions with confidence scores
+4. Remember: This is for educational purposes only!
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🔬 The Tech Behind It
+
+- **Frontend**: React 19 + Vite + TypeScript + TailwindCSS
+- **AI Model**: TensorFlow.js (converted from Python)
+- **Performance**: ~85% accuracy on test data
+- **Dataset**: Large collection of symptom-disease mappings
+- **Architecture**: Dense Neural Network with multiple layers
+
+## 🚀 Try It Yourself
+
+```bash
+# Clone the repo
+git clone https://github.com/tawanastate/medic.git
+
+# Install dependencies
+cd medic
+npm install
+
+# Run locally
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## ⚠️ Important Disclaimer
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+I'm a software developer, not a medical professional! This project is:
+- ✅ An interesting tech experiment
+- ✅ Open source and free to use
+- ✅ Educational
+- ❌ NOT a substitute for professional medical advice
+- ❌ NOT meant for self-diagnosis
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 🤝 Let's Make It Better!
 
+Are you a healthcare professional interested in improving this project? I'd love to collaborate! While I can handle the tech side, having medical expertise would make this tool much more valuable.
 
+## 👨‍💻 About the Creator
 
-- Last seen doing chet messages
+Hey! I'm Tawananyasha Mukoriwo, a software developer who loves experimenting with Machine Learning. While I don't have medical training, I believe technology can help make healthcare knowledge more accessible.
+
+- 🌐 Website: [tawananyasha.com](https://tawananyasha.com)
+- 📧 Contact: [hello@tawananyasha.com]
+- 💻 More projects: [TawanaState Github Profile](https://github.com/tawanastate)
+
+## 🔮 Future Plans
+
+- [ ] Improve model accuracy
+- [ ] Add more symptoms and conditions
+- [ ] Create API endpoints
+- [ ] Add multilingual support
+
+## 🙏 Contributing
+
+All contributions are welcome! Whether you're fixing bugs, adding features, or improving documentation - feel free to open a PR!
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+*Remember: Always consult healthcare professionals for medical advice. This is just a fun tech project! 🏥*
