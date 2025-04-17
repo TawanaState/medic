@@ -1,7 +1,6 @@
-
 export default function Nav() {
     return <nav className="flex flex-row justify-between">
-        <button className="btn">Developer</button>
-        <button className="btn">Share</button>
+        <a href="https://tawananyasha.com/" className="btn">Developer</a>
+        <a href="hhttps://github.com/TawanaState/medic/" className="btn">Code</a>
     </nav>
 }
