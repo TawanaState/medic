@@ -82,7 +82,7 @@ const SymptomsSelect = ({ selected, setSelected, DATASET }: SymptomsSelectProps)
           maxHeight: 300,
           margin: 0,
         }}
-        className='p-2 text-blue-950'
+        className='p-1 text-blue-950'
       >
         {items.length ? (
           items.map((item, index) => (
@@ -90,7 +90,7 @@ const SymptomsSelect = ({ selected, setSelected, DATASET }: SymptomsSelectProps)
               style={{
                 background: focusIndex === index ? '#ddd' : 'none'
               }}
-              className='text-inherit'
+              className='text-inherit p-1.5 cursor-pointer'
               key={item}
               {...getItemProps({ item, index })}
             >
