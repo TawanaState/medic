@@ -6,13 +6,14 @@ import * as tf from '@tensorflow/tfjs';
 const MAX_PREDICTIONS = 10; 
 let model: tf.GraphModel | null = null;
 
-async function loadModel() {
-  model = await tf.loadGraphModel("model/model.json");
+export async function loadModel() {
+    model = null;
+    model = await tf.loadGraphModel("model/model.json");
 }
 
 export async function predict(symptoms: string[]): Promise<{ name: string; accuracy: string; }[]> {
     if (!model) {
-        await loadModel();
+        return []
     }
     let x_tensor = symptomsToTensor(symptoms);
     const sortedPredictions = await getSortedPredictionsTFJS(x_tensor);
